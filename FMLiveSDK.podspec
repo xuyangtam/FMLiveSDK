@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "FMLiveSDK"
-  spec.version      = "0.0.1"
-  spec.summary      = "A short description of FMLiveSDK."
+  spec.version      = "0.0.4"
+  spec.summary      = "live"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,8 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-  这是描述区，这里的文字一定要比 spec.summary 中的内容长，
-  否则spec远端验证可能会不通过
+  FMLiveSDK
                    DESC
 
   # 这里是主页地址，可以写github私有库的主页地址
