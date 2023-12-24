@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DBD4CE1DFAE74C22747934E /* Pods_FMLiveSDK_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3728A9C91495B9830136204F /* Pods_FMLiveSDK_Demo.framework */; };
+		E0E725632B37114F004C5596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E725622B37114F004C5596 /* AppDelegate.swift */; };
+		E0E725652B37114F004C5596 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E725642B37114F004C5596 /* SceneDelegate.swift */; };
+		E0E725672B37114F004C5596 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E725662B37114F004C5596 /* ViewController.swift */; };
+		E0E7256A2B37114F004C5596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0E725682B37114F004C5596 /* Main.storyboard */; };
+		E0E7256C2B371150004C5596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0E7256B2B371150004C5596 /* Assets.xcassets */; };
+		E0E7256F2B371150004C5596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0E7256D2B371150004C5596 /* LaunchScreen.storyboard */; };
+		E0E7257E2B37118D004C5596 /* FMLiveSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E0E7257D2B37118D004C5596 /* FMLiveSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0E725812B37118D004C5596 /* FMLiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E7257B2B37118D004C5596 /* FMLiveSDK.framework */; };
+		E0E725822B37118D004C5596 /* FMLiveSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0E7257B2B37118D004C5596 /* FMLiveSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E0E725882B371351004C5596 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E725872B371351004C5596 /* Manager.swift */; };
+		E0E7258B2B3718FB004C5596 /* FMLiveSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E0E7258A2B3718FA004C5596 /* FMLiveSDK.podspec */; };
+		F00AE53ACEFB7BFD1594003D /* Pods_FMLiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFA589AF1DC924DBF3FFF87 /* Pods_FMLiveSDK.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E0E7257F2B37118D004C5596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0E725572B37114F004C5596 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0E7257A2B37118D004C5596;
+			remoteInfo = FMLiveSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E0E725862B37118D004C5596 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E0E725822B37118D004C5596 /* FMLiveSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		34012266791257D563C80ECE /* Pods-FMLiveSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMLiveSDK.debug.xcconfig"; path = "Target Support Files/Pods-FMLiveSDK/Pods-FMLiveSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		3728A9C91495B9830136204F /* Pods_FMLiveSDK_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FMLiveSDK_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AFA589AF1DC924DBF3FFF87 /* Pods_FMLiveSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FMLiveSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DD2575ECFDBEDF8E5F682F0 /* Pods-FMLiveSDK_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMLiveSDK_Demo.debug.xcconfig"; path = "Target Support Files/Pods-FMLiveSDK_Demo/Pods-FMLiveSDK_Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		CED99531DA28E1C71256A0FF /* Pods-FMLiveSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMLiveSDK.release.xcconfig"; path = "Target Support Files/Pods-FMLiveSDK/Pods-FMLiveSDK.release.xcconfig"; sourceTree = "<group>"; };
+		E0E7255F2B37114F004C5596 /* FMLiveSDK_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMLiveSDK_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0E725622B37114F004C5596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E0E725642B37114F004C5596 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E0E725662B37114F004C5596 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E0E725692B37114F004C5596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E0E7256B2B371150004C5596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E0E7256E2B371150004C5596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E0E725702B371150004C5596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0E7257B2B37118D004C5596 /* FMLiveSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMLiveSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0E7257D2B37118D004C5596 /* FMLiveSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMLiveSDK.h; sourceTree = "<group>"; };
+		E0E725872B371351004C5596 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		E0E7258A2B3718FA004C5596 /* FMLiveSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FMLiveSDK.podspec; sourceTree = "<group>"; };
+		F6C7420DE5473EB3D7B4F1F1 /* Pods-FMLiveSDK_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMLiveSDK_Demo.release.xcconfig"; path = "Target Support Files/Pods-FMLiveSDK_Demo/Pods-FMLiveSDK_Demo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0E7255C2B37114F004C5596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0E725812B37118D004C5596 /* FMLiveSDK.framework in Frameworks */,
+				8DBD4CE1DFAE74C22747934E /* Pods_FMLiveSDK_Demo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0E725782B37118D004C5596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F00AE53ACEFB7BFD1594003D /* Pods_FMLiveSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EE9B30EB6D5475F27CFAD61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34012266791257D563C80ECE /* Pods-FMLiveSDK.debug.xcconfig */,
+				CED99531DA28E1C71256A0FF /* Pods-FMLiveSDK.release.xcconfig */,
+				9DD2575ECFDBEDF8E5F682F0 /* Pods-FMLiveSDK_Demo.debug.xcconfig */,
+				F6C7420DE5473EB3D7B4F1F1 /* Pods-FMLiveSDK_Demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		324A950825C5B7446E387FCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AFA589AF1DC924DBF3FFF87 /* Pods_FMLiveSDK.framework */,
+				3728A9C91495B9830136204F /* Pods_FMLiveSDK_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0E725562B37114F004C5596 = {
+			isa = PBXGroup;
+			children = (
+				E0E7258A2B3718FA004C5596 /* FMLiveSDK.podspec */,
+				E0E725612B37114F004C5596 /* FMLiveSDK_Demo */,
+				E0E7257C2B37118D004C5596 /* FMLiveSDK */,
+				E0E725602B37114F004C5596 /* Products */,
+				0EE9B30EB6D5475F27CFAD61 /* Pods */,
+				324A950825C5B7446E387FCD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E0E725602B37114F004C5596 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0E7255F2B37114F004C5596 /* FMLiveSDK_Demo.app */,
+				E0E7257B2B37118D004C5596 /* FMLiveSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0E725612B37114F004C5596 /* FMLiveSDK_Demo */ = {
+			isa = PBXGroup;
+			children = (
+				E0E725622B37114F004C5596 /* AppDelegate.swift */,
+				E0E725642B37114F004C5596 /* SceneDelegate.swift */,
+				E0E725662B37114F004C5596 /* ViewController.swift */,
+				E0E725682B37114F004C5596 /* Main.storyboard */,
+				E0E7256B2B371150004C5596 /* Assets.xcassets */,
+				E0E7256D2B371150004C5596 /* LaunchScreen.storyboard */,
+				E0E725702B371150004C5596 /* Info.plist */,
+			);
+			path = FMLiveSDK_Demo;
+			sourceTree = "<group>";
+		};
+		E0E7257C2B37118D004C5596 /* FMLiveSDK */ = {
+			isa = PBXGroup;
+			children = (
+				E0E7257D2B37118D004C5596 /* FMLiveSDK.h */,
+				E0E725872B371351004C5596 /* Manager.swift */,
+			);
+			path = FMLiveSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E0E725762B37118D004C5596 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0E7257E2B37118D004C5596 /* FMLiveSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E0E7255E2B37114F004C5596 /* FMLiveSDK_Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0E725732B371150004C5596 /* Build configuration list for PBXNativeTarget "FMLiveSDK_Demo" */;
+			buildPhases = (
+				FF8D6E89163B8B092CAD9B04 /* [CP] Check Pods Manifest.lock */,
+				E0E7255B2B37114F004C5596 /* Sources */,
+				E0E7255C2B37114F004C5596 /* Frameworks */,
+				E0E7255D2B37114F004C5596 /* Resources */,
+				E0E725862B37118D004C5596 /* Embed Frameworks */,
+				860FC03C0988F6D294C3EE4D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0E725802B37118D004C5596 /* PBXTargetDependency */,
+			);
+			name = FMLiveSDK_Demo;
+			productName = FMLiveSDK_Demo;
+			productReference = E0E7255F2B37114F004C5596 /* FMLiveSDK_Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E0E7257A2B37118D004C5596 /* FMLiveSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0E725832B37118D004C5596 /* Build configuration list for PBXNativeTarget "FMLiveSDK" */;
+			buildPhases = (
+				F51A566CEA71FDA6682268A8 /* [CP] Check Pods Manifest.lock */,
+				E0E725762B37118D004C5596 /* Headers */,
+				E0E725772B37118D004C5596 /* Sources */,
+				E0E725782B37118D004C5596 /* Frameworks */,
+				E0E725792B37118D004C5596 /* Resources */,
+				E0E725892B37144A004C5596 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMLiveSDK;
+			productName = FMLiveSDK;
+			productReference = E0E7257B2B37118D004C5596 /* FMLiveSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E0E725572B37114F004C5596 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					E0E7255E2B37114F004C5596 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					E0E7257A2B37118D004C5596 = {
+						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
+					};
+				};
+			};
+			buildConfigurationList = E0E7255A2B37114F004C5596 /* Build configuration list for PBXProject "FMLiveSDK_Demo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E0E725562B37114F004C5596;
+			productRefGroup = E0E725602B37114F004C5596 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0E7255E2B37114F004C5596 /* FMLiveSDK_Demo */,
+				E0E7257A2B37118D004C5596 /* FMLiveSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0E7255D2B37114F004C5596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0E7256F2B371150004C5596 /* LaunchScreen.storyboard in Resources */,
+				E0E7256C2B371150004C5596 /* Assets.xcassets in Resources */,
+				E0E7258B2B3718FB004C5596 /* FMLiveSDK.podspec in Resources */,
+				E0E7256A2B37114F004C5596 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0E725792B37118D004C5596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		860FC03C0988F6D294C3EE4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FMLiveSDK_Demo/Pods-FMLiveSDK_Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FMLiveSDK_Demo/Pods-FMLiveSDK_Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FMLiveSDK_Demo/Pods-FMLiveSDK_Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0E725892B37144A004C5596 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# 真机和模拟器framework合并脚本\n# 选中framework，分别在真机和模拟器编译成功即可\nif [ \"${ACTION}\" = \"build\" ]\nthen\n# 定义framework名称(替换为自己定义的名字即可)\nSDK_NAME=FMLiveSDK\n# 输出路径\nINSTALL_DIR=${SRCROOT}/Products/${SDK_NAME}.framework\n# 真机路径\nDEVICE_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphoneos/${SDK_NAME}.framework\n# 模拟器路径\nSIMULATOR_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphonesimulator/${SDK_NAME}.framework\n# 如果输出路径已存在，则删除\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n# 创建输出路径\nmkdir -p \"${INSTALL_DIR}\"\n# 如果真机framework和模拟器framework都存在\nif [ -d \"${DEVICE_DIR}\" ] && [ -d \"${SIMULATOR_DIR}\" ]\nthen\n# 拷贝真机framework到输出路径\ncp -r \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# 拷贝模拟器framework中的modules到输出路径\ncp -r \"${SIMULATOR_DIR}/Modules/${SDK_NAME}.swiftmodule/\" \"${INSTALL_DIR}/Modules/${SDK_NAME}.swiftmodule\"\n# 合并真机framework和模拟器framework\nlipo -create \"${DEVICE_DIR}/${SDK_NAME}\" \"${SIMULATOR_DIR}/${SDK_NAME}\" -output \"${INSTALL_DIR}/${SDK_NAME}\"\nfi\nfi\n";
+		};
+		F51A566CEA71FDA6682268A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FMLiveSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF8D6E89163B8B092CAD9B04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FMLiveSDK_Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0E7255B2B37114F004C5596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0E725672B37114F004C5596 /* ViewController.swift in Sources */,
+				E0E725632B37114F004C5596 /* AppDelegate.swift in Sources */,
+				E0E725652B37114F004C5596 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0E725772B37118D004C5596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0E725882B371351004C5596 /* Manager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0E725802B37118D004C5596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0E7257A2B37118D004C5596 /* FMLiveSDK */;
+			targetProxy = E0E7257F2B37118D004C5596 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E0E725682B37114F004C5596 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0E725692B37114F004C5596 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E0E7256D2B371150004C5596 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0E7256E2B371150004C5596 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E0E725712B371150004C5596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E0E725722B371150004C5596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0E725742B371150004C5596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DD2575ECFDBEDF8E5F682F0 /* Pods-FMLiveSDK_Demo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P5VQN4Z2F3;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FMLiveSDK_Demo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.rising.FMLiveSDK-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E0E725752B371150004C5596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6C7420DE5473EB3D7B4F1F1 /* Pods-FMLiveSDK_Demo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P5VQN4Z2F3;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FMLiveSDK_Demo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.rising.FMLiveSDK-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E0E725842B37118D004C5596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34012266791257D563C80ECE /* Pods-FMLiveSDK.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				EXCLUDED_ARCHS = arm64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.rising.FMLiveSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E0E725852B37118D004C5596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CED99531DA28E1C71256A0FF /* Pods-FMLiveSDK.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				EXCLUDED_ARCHS = arm64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.rising.FMLiveSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0E7255A2B37114F004C5596 /* Build configuration list for PBXProject "FMLiveSDK_Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0E725712B371150004C5596 /* Debug */,
+				E0E725722B371150004C5596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0E725732B371150004C5596 /* Build configuration list for PBXNativeTarget "FMLiveSDK_Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0E725742B371150004C5596 /* Debug */,
+				E0E725752B371150004C5596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0E725832B37118D004C5596 /* Build configuration list for PBXNativeTarget "FMLiveSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0E725842B37118D004C5596 /* Debug */,
+				E0E725852B37118D004C5596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E0E725572B37114F004C5596 /* Project object */;
+}

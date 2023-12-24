@@ -1,0 +1,6 @@
+framework module Pods_FMLiveSDK_Demo {
+  umbrella header "Pods-FMLiveSDK_Demo-umbrella.h"
+
+  export *
+  module * { export * }
+}
