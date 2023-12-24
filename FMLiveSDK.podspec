@@ -30,7 +30,7 @@ Pod::Spec.new do |spec|
                    DESC
 
   # 这里是主页地址，可以写github私有库的主页地址
-  spec.homepage     = "https://github.com/xuyangtam/LiveSDK"
+  spec.homepage     = "https://github.com/xuyangtam/FMLiveSDK"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -83,7 +83,7 @@ Pod::Spec.new do |spec|
   #
 
   # 这是私有库的路径，填写私有库的git clone 的链接就行
-  spec.source       = { :git => "git@github.com:xuyangtam/LiveSDK.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "git@github.com:xuyangtam/FMLiveSDK.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -98,7 +98,8 @@ Pod::Spec.new do |spec|
   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
   # 此处暴露的是framework
-  spec.vendored_frameworks = "Products/LiveSDK.framework"
+  spec.vendored_frameworks = "Products/FMLiveSDK.framework"
+  
 
   # spec.public_header_files = "Classes/**/*.h"
 
