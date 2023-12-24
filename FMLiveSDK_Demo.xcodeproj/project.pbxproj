@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		E0EEE5FB2B388EB9007B1A75 /* frameworkAggregate */ = {
+		E0EEE6012B38B4C1007B1A75 /* Shell */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = E0EEE5FC2B388EB9007B1A75 /* Build configuration list for PBXAggregateTarget "frameworkAggregate" */;
+			buildConfigurationList = E0EEE6022B38B4C1007B1A75 /* Build configuration list for PBXAggregateTarget "Shell" */;
 			buildPhases = (
-				E0EEE5FF2B388EC3007B1A75 /* ShellScript */,
+				E0EEE6052B38B4CB007B1A75 /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = frameworkAggregate;
-			productName = frameworkAggregate;
+			name = Shell;
+			productName = Shell;
 		};
 /* End PBXAggregateTarget section */
 
@@ -31,7 +31,7 @@
 		E0E7257E2B37118D004C5596 /* FMLiveSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E0E7257D2B37118D004C5596 /* FMLiveSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0E725812B37118D004C5596 /* FMLiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E7257B2B37118D004C5596 /* FMLiveSDK.framework */; };
 		E0E725822B37118D004C5596 /* FMLiveSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0E7257B2B37118D004C5596 /* FMLiveSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E0E725882B371351004C5596 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E725872B371351004C5596 /* Manager.swift */; };
+		E0E725882B371351004C5596 /* FMLiveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E725872B371351004C5596 /* FMLiveManager.swift */; };
 		E0E7258B2B3718FB004C5596 /* FMLiveSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E0E7258A2B3718FA004C5596 /* FMLiveSDK.podspec */; };
 		F00AE53ACEFB7BFD1594003D /* Pods_FMLiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFA589AF1DC924DBF3FFF87 /* Pods_FMLiveSDK.framework */; };
 /* End PBXBuildFile section */
@@ -76,7 +76,7 @@
 		E0E725702B371150004C5596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0E7257B2B37118D004C5596 /* FMLiveSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMLiveSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E7257D2B37118D004C5596 /* FMLiveSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMLiveSDK.h; sourceTree = "<group>"; };
-		E0E725872B371351004C5596 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		E0E725872B371351004C5596 /* FMLiveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMLiveManager.swift; sourceTree = "<group>"; };
 		E0E7258A2B3718FA004C5596 /* FMLiveSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FMLiveSDK.podspec; sourceTree = "<group>"; };
 		F6C7420DE5473EB3D7B4F1F1 /* Pods-FMLiveSDK_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMLiveSDK_Demo.release.xcconfig"; path = "Target Support Files/Pods-FMLiveSDK_Demo/Pods-FMLiveSDK_Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				E0E7257D2B37118D004C5596 /* FMLiveSDK.h */,
-				E0E725872B371351004C5596 /* Manager.swift */,
+				E0E725872B371351004C5596 /* FMLiveManager.swift */,
 			);
 			path = FMLiveSDK;
 			sourceTree = "<group>";
@@ -210,7 +210,6 @@
 				E0E725772B37118D004C5596 /* Sources */,
 				E0E725782B37118D004C5596 /* Frameworks */,
 				E0E725792B37118D004C5596 /* Resources */,
-				E0E725892B37144A004C5596 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -238,7 +237,7 @@
 						CreatedOnToolsVersion = 15.1;
 						LastSwiftMigration = 1510;
 					};
-					E0EEE5FB2B388EB9007B1A75 = {
+					E0EEE6012B38B4C1007B1A75 = {
 						CreatedOnToolsVersion = 15.1;
 					};
 				};
@@ -258,7 +257,7 @@
 			targets = (
 				E0E7255E2B37114F004C5596 /* FMLiveSDK_Demo */,
 				E0E7257A2B37118D004C5596 /* FMLiveSDK */,
-				E0EEE5FB2B388EB9007B1A75 /* frameworkAggregate */,
+				E0EEE6012B38B4C1007B1A75 /* Shell */,
 			);
 		};
 /* End PBXProject section */
@@ -302,9 +301,8 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FMLiveSDK_Demo/Pods-FMLiveSDK_Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E0E725892B37144A004C5596 /* ShellScript */ = {
+		E0EEE6052B38B4CB007B1A75 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -319,23 +317,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# 真机和模拟器framework合并脚本\n# 选中framework，分别在真机和模拟器编译成功即可\nif [ \"${ACTION}\" = \"build\" ]\nthen\n# 定义framework名称(替换为自己定义的名字即可)\nSDK_NAME=FMLiveSDK\n# 输出路径\nINSTALL_DIR=${SRCROOT}/Products/${SDK_NAME}.framework\n# 真机路径\nDEVICE_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphoneos/${SDK_NAME}.framework\n# 模拟器路径\nSIMULATOR_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphonesimulator/${SDK_NAME}.framework\n# 如果输出路径已存在，则删除\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n# 创建输出路径\nmkdir -p \"${INSTALL_DIR}\"\n# 如果真机framework和模拟器framework都存在\nif [ -d \"${DEVICE_DIR}\" ] && [ -d \"${SIMULATOR_DIR}\" ]\nthen\n# 拷贝真机framework到输出路径\ncp -r \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# 拷贝模拟器framework中的modules到输出路径\ncp -r \"${SIMULATOR_DIR}/Modules/${SDK_NAME}.swiftmodule/\" \"${INSTALL_DIR}/Modules/${SDK_NAME}.swiftmodule\"\n# 合并真机framework和模拟器framework\nlipo -create \"${DEVICE_DIR}/${SDK_NAME}\" \"${SIMULATOR_DIR}/${SDK_NAME}\" -output \"${INSTALL_DIR}/${SDK_NAME}\"\nfi\nfi\n";
-		};
-		E0EEE5FF2B388EC3007B1A75 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "sh frameworkAggregate.sh\n";
 		};
 		F51A566CEA71FDA6682268A8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -398,7 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0E725882B371351004C5596 /* Manager.swift in Sources */,
+				E0E725882B371351004C5596 /* FMLiveManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,7 +693,7 @@
 			};
 			name = Release;
 		};
-		E0EEE5FD2B388EB9007B1A75 /* Debug */ = {
+		E0EEE6032B38B4C1007B1A75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -721,7 +702,7 @@
 			};
 			name = Debug;
 		};
-		E0EEE5FE2B388EB9007B1A75 /* Release */ = {
+		E0EEE6042B38B4C1007B1A75 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -760,11 +741,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E0EEE5FC2B388EB9007B1A75 /* Build configuration list for PBXAggregateTarget "frameworkAggregate" */ = {
+		E0EEE6022B38B4C1007B1A75 /* Build configuration list for PBXAggregateTarget "Shell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E0EEE5FD2B388EB9007B1A75 /* Debug */,
-				E0EEE5FE2B388EB9007B1A75 /* Release */,
+				E0EEE6032B38B4C1007B1A75 /* Debug */,
+				E0EEE6042B38B4C1007B1A75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

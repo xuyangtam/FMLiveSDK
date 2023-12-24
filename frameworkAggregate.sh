@@ -1,39 +1,99 @@
-#要build的target名
-TARGET_NAME=FMLiveSDK
-if [[ $1 ]]
+# Sets the target folders and the final framework product.
+
+# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME
+
+# 例如: FMK_NAME = "MyFramework"
+
+FMK_NAME=FMLiveSDK
+
+if [ "${ACTION}" = "build" ]
+
 then
-TARGET_NAME=$1
-fi
-UNIVERSAL_OUTPUT_FOLDER="${SRCROOT}/${PROJECT_NAME}_Products/"
 
-#创建输出目录，并删除之前的framework文件
-mkdir -p "${UNIVERSAL_OUTPUT_FOLDER}"
-rm -rf "${UNIVERSAL_OUTPUT_FOLDER}/${TARGET_NAME}.framework"
+# 设置Configuration，为Debug和Release
 
-#分别编译模拟器和真机的Framework
-xcodebuild -target "${TARGET_NAME}" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR="${BUILD_DIR}" BUILD_ROOT="${BUILD_ROOT}" clean build
-xcodebuild -target "${TARGET_NAME}" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator BUILD_DIR="${BUILD_DIR}" BUILD_ROOT="${BUILD_ROOT}" clean build
+COF_NAME_DEBUG=Debug
 
-#拷贝framework到univer目录
-cp -R "${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}.framework" "${UNIVERSAL_OUTPUT_FOLDER}"
+COF_NAME_RELEASE=Release
 
-#合并framework，输出最终的framework到build目录
-lipo -create -output "${UNIVERSAL_OUTPUT_FOLDER}/${TARGET_NAME}.framework/${TARGET_NAME}" "${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}.framework/${TARGET_NAME}" "${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}.framework/${TARGET_NAME}"
+# Install dir will be the final output to the framework.
 
-#删除编译之后生成的无关的配置文件
-dir_path="${UNIVERSAL_OUTPUT_FOLDER}/${TARGET_NAME}.framework/"
-for file in ls $dir_path
-do
-if [[ ${file} =~ ".xcconfig" ]]
+# The following line create it in the root folder of the current project.
+
+# 最后生成Debug和Release版本的framework的路径
+
+INSTALL_DIR_DEBUG=${SRCROOT}/Products/${COF_NAME_DEBUG}/${FMK_NAME}.framework
+
+INSTALL_DIR_RELEASE=${SRCROOT}/Products/${COF_NAME_RELEASE}/${FMK_NAME}.framework
+
+# Working dir will be deleted after the framework creation.
+
+# 编译之后的framework路径
+
+WRK_DIR=build
+
+DEVICE_DIR_DEBUG=${WRK_DIR}/${COF_NAME_DEBUG}-iphoneos/${FMK_NAME}.framework
+
+SIMULATOR_DIR_DEBUG=${WRK_DIR}/${COF_NAME_DEBUG}-iphonesimulator/${FMK_NAME}.framework
+
+DEVICE_DIR_RELEASE=${WRK_DIR}/${COF_NAME_RELEASE}-iphoneos/${FMK_NAME}.framework
+
+SIMULATOR_DIR_RELEASE=${WRK_DIR}/${COF_NAME_RELEASE}-iphonesimulator/${FMK_NAME}.framework
+
+# -configuration ${CONFIGURATION}
+
+# Clean and Building both architectures.
+
+# 编译各个版本的framework
+
+xcodebuild -configuration ${COF_NAME_DEBUG} -target "${FMK_NAME}" ONLY_ACTIVE_ARCH=NO -sdk iphoneos clean build
+
+xcodebuild -configuration ${COF_NAME_DEBUG} -target "${FMK_NAME}" ONLY_ACTIVE_ARCH=NO -sdk iphonesimulator clean build
+
+xcodebuild -configuration ${COF_NAME_RELEASE} -target "${FMK_NAME}" ONLY_ACTIVE_ARCH=NO -sdk iphoneos clean build
+
+xcodebuild -configuration ${COF_NAME_RELEASE} -target "${FMK_NAME}" ONLY_ACTIVE_ARCH=NO -sdk iphonesimulator clean build
+
+# Cleaning the oldest.
+
+if [ -d "${INSTALL_DIR_DEBUG}" ]
+
 then
-rm -f "${dir_path}/${file}"
+
+rm -rf "${INSTALL_DIR_DEBUG}"
+
 fi
-done
-#判断build文件夹是否存在，存在则删除
-if [ -d "${SRCROOT}/build" ]
+
+mkdir -p "${INSTALL_DIR_DEBUG}"
+
+cp -R "${DEVICE_DIR_DEBUG}/" "${INSTALL_DIR_DEBUG}/"
+
+# 合并Debug版本的framework
+
+lipo -create "${DEVICE_DIR_DEBUG}/${FMK_NAME}" "${SIMULATOR_DIR_DEBUG}/${FMK_NAME}" -output "${INSTALL_DIR_DEBUG}/${FMK_NAME}"
+
+# Cleaning the oldest.
+
+if [ -d "${INSTALL_DIR_RELEASE}" ]
+
 then
-rm -rf "${SRCROOT}/build"
+
+rm -rf "${INSTALL_DIR_RELEASE}"
+
 fi
-rm -rf "${BUILD_DIR}/${CONFIGURATION}-iphonesimulator" "${BUILD_DIR}/${CONFIGURATION}-iphoneos"
-#打开合并后的文件夹
-open "${UNIVERSAL_OUTPUT_FOLDER}"
+
+mkdir -p "${INSTALL_DIR_RELEASE}"
+
+cp -R "${DEVICE_DIR_RELEASE}/" "${INSTALL_DIR_RELEASE}/"
+
+# 合并Release版本的framework
+
+lipo -create "${DEVICE_DIR_RELEASE}/${FMK_NAME}" "${SIMULATOR_DIR_RELEASE}/${FMK_NAME}" -output "${INSTALL_DIR_RELEASE}/${FMK_NAME}"
+
+# 删除build路径
+
+rm -r "${WRK_DIR}"
+
+open "${INSTALL_DIR_RELEASE}"
+
+fi

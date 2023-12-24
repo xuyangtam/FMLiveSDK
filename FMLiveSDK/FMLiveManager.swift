@@ -7,7 +7,7 @@
 
 import Foundation
 
-@objc public class Manager: NSObject {
+@objc public class FMLiveManager: NSObject {
     
     @objc public func sayHello() {
         print("say hello")
