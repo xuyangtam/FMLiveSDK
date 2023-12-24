@@ -7,9 +7,9 @@
 
 import Foundation
 
-public class Manager: NSObject {
+@objc public class Manager: NSObject {
     
-    public func sayHello() {
+    @objc public func sayHello() {
         print("say hello")
     }
 }
