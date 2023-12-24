@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "FMLiveSDK"
-  spec.version      = "0.0.7"
+  spec.version      = "0.0.9"
   spec.summary      = "live"
 
   # This description is used to generate tags and improve search results.
@@ -97,7 +97,7 @@ Pod::Spec.new do |spec|
   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
   # 此处暴露的是framework
-  spec.vendored_frameworks = "Products/FMLiveSDK.framework"
+  spec.vendored_frameworks = "FMLiveSDK_Demo_Products/FMLiveSDK.framework"
   
 
   # spec.public_header_files = "Classes/**/*.h"

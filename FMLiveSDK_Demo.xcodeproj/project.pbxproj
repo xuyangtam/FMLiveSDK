@@ -6,6 +6,20 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		E0EEE5FB2B388EB9007B1A75 /* frameworkAggregate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E0EEE5FC2B388EB9007B1A75 /* Build configuration list for PBXAggregateTarget "frameworkAggregate" */;
+			buildPhases = (
+				E0EEE5FF2B388EC3007B1A75 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = frameworkAggregate;
+			productName = frameworkAggregate;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		8DBD4CE1DFAE74C22747934E /* Pods_FMLiveSDK_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3728A9C91495B9830136204F /* Pods_FMLiveSDK_Demo.framework */; };
 		E0E725632B37114F004C5596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E725622B37114F004C5596 /* AppDelegate.swift */; };
@@ -224,6 +238,9 @@
 						CreatedOnToolsVersion = 15.1;
 						LastSwiftMigration = 1510;
 					};
+					E0EEE5FB2B388EB9007B1A75 = {
+						CreatedOnToolsVersion = 15.1;
+					};
 				};
 			};
 			buildConfigurationList = E0E7255A2B37114F004C5596 /* Build configuration list for PBXProject "FMLiveSDK_Demo" */;
@@ -241,6 +258,7 @@
 			targets = (
 				E0E7255E2B37114F004C5596 /* FMLiveSDK_Demo */,
 				E0E7257A2B37118D004C5596 /* FMLiveSDK */,
+				E0EEE5FB2B388EB9007B1A75 /* frameworkAggregate */,
 			);
 		};
 /* End PBXProject section */
@@ -286,6 +304,7 @@
 		};
 		E0E725892B37144A004C5596 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -300,6 +319,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# 真机和模拟器framework合并脚本\n# 选中framework，分别在真机和模拟器编译成功即可\nif [ \"${ACTION}\" = \"build\" ]\nthen\n# 定义framework名称(替换为自己定义的名字即可)\nSDK_NAME=FMLiveSDK\n# 输出路径\nINSTALL_DIR=${SRCROOT}/Products/${SDK_NAME}.framework\n# 真机路径\nDEVICE_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphoneos/${SDK_NAME}.framework\n# 模拟器路径\nSIMULATOR_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphonesimulator/${SDK_NAME}.framework\n# 如果输出路径已存在，则删除\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n# 创建输出路径\nmkdir -p \"${INSTALL_DIR}\"\n# 如果真机framework和模拟器framework都存在\nif [ -d \"${DEVICE_DIR}\" ] && [ -d \"${SIMULATOR_DIR}\" ]\nthen\n# 拷贝真机framework到输出路径\ncp -r \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# 拷贝模拟器framework中的modules到输出路径\ncp -r \"${SIMULATOR_DIR}/Modules/${SDK_NAME}.swiftmodule/\" \"${INSTALL_DIR}/Modules/${SDK_NAME}.swiftmodule\"\n# 合并真机framework和模拟器framework\nlipo -create \"${DEVICE_DIR}/${SDK_NAME}\" \"${SIMULATOR_DIR}/${SDK_NAME}\" -output \"${INSTALL_DIR}/${SDK_NAME}\"\nfi\nfi\n";
+		};
+		E0EEE5FF2B388EC3007B1A75 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh frameworkAggregate.sh\n";
 		};
 		F51A566CEA71FDA6682268A8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -601,6 +637,7 @@
 				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -675,6 +712,24 @@
 			};
 			name = Release;
 		};
+		E0EEE5FD2B388EB9007B1A75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E0EEE5FE2B388EB9007B1A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -701,6 +756,15 @@
 			buildConfigurations = (
 				E0E725842B37118D004C5596 /* Debug */,
 				E0E725852B37118D004C5596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0EEE5FC2B388EB9007B1A75 /* Build configuration list for PBXAggregateTarget "frameworkAggregate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0EEE5FD2B388EB9007B1A75 /* Debug */,
+				E0EEE5FE2B388EB9007B1A75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
