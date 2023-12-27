@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "FMLiveSDK"
-  spec.version      = "0.1.1"
+  spec.version      = "0.1.2"
   spec.summary      = "live"
 
   # This description is used to generate tags and improve search results.
@@ -82,7 +82,7 @@ Pod::Spec.new do |spec|
   #
 
   # 这是私有库的路径，填写私有库的git clone 的链接就行
-  spec.source       = { :git => "git@github.com:xuyangtam/FMLiveSDK.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/xuyangtam/FMLiveSDK.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
